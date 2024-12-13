@@ -1,3 +1,3 @@
-import src.mlProject as logger
+from src.mlProject import logger
 
-logger.log("Hello World")
+logger.info("Hello World")
