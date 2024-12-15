@@ -15,7 +15,7 @@
 
 
 
-# How to run?
+## How to run?
 ### STEPS:
 
 Clone the repository
@@ -45,27 +45,17 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Now,
-```bash
-open up you local host and port
-```
-
-
-
 ## MLflow
 
 [Documentation](https://mlflow.org/docs/latest/index.html)
 
-
-##### cmd
-- mlflow ui
 
 ### dagshub
 [dagshub](https://dagshub.com/)
 
 ```bash
 import dagshub
-dagshub.init(repo_owner='mh4070685', repo_name='MLOPS-Project', mlflow=True)
+dagshub.init(repo_owner='_____', repo_name='______', mlflow=True)
 
 import mlflow
 with mlflow.start_run():
@@ -73,15 +63,15 @@ with mlflow.start_run():
   mlflow.log_metric('metric name', 1)
 ```
 
-Run this to export as env variables:
+Run this to integrate MLFOW in your local envirnment
 
 
 
-# AWS-CICD-Deployment-with-Github-Actions
+## AWS-CICD-Deployment-with-Github-Actions
 
-## 1. Login to AWS console.
+### 1. Login to AWS console.
 
-## 2. Create IAM user for deployment
+### 2. Create IAM user for deployment
 
 	#with specific access
 
@@ -109,13 +99,13 @@ Run this to export as env variables:
 	2. AmazonEC2FullAccess
 
 	
-## 3. Create ECR repo to store/save docker image
+### 3. Create ECR repo to store/save docker image
     - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
 
 	
-## 4. Create EC2 machine (Ubuntu) 
+### 4. Create EC2 machine (Ubuntu) 
 
-## 5. Open EC2 and Install docker in EC2 Machine:
+### 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
 	#optinal
@@ -134,11 +124,11 @@ Run this to export as env variables:
 
 	newgrp docker
 	
-# 6. Configure EC2 as self-hosted runner:
+### 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
 
-# 7. Setup github secrets:
+### 7. Setup github secrets:
 
     AWS_ACCESS_KEY_ID=
 
