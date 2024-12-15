@@ -1,10 +1,7 @@
-from ensure import ensure_annotations
+import dagshub
+dagshub.init(repo_owner='mh4070685', repo_name='MLOPS-Project', mlflow=True)
 
-
-@ensure_annotations
-def get_predict(x: int, y: int) -> int:
-    return x * y
-
-
-print(get_predict(2, 3))
-print(get_predict(x=2, y="3"))
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)
