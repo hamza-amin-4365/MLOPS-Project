@@ -1,9 +1,13 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
-RUN apt update -y && apt install awscli -y
+RUN apt-get update -y && apt-get install -y awscli  # Ensure awscli is installed if needed
+RUN pip install --upgrade pip
+
 WORKDIR /app
 
-COPY . /app
+COPY requirements.txt . # Copy requirements first for caching
 RUN pip install -r requirements.txt
+
+COPY . .  # Copy the rest of the application code
 
 CMD ["python3", "app.py"]
