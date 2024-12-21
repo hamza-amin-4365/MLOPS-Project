@@ -162,6 +162,8 @@ cython_debug/
 #.idea/
 
 artifacts/*
+research/*
+deploymets_proof/*
 mlruns/*
 .ipynb_checkpoints/*
 *.ipynb

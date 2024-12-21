@@ -12,3 +12,5 @@ joblib
 types-PyYAML
 Flask
 Flask-Cors
+shap==0.41.0
+lime==0.2.0.1

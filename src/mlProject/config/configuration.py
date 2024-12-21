@@ -2,7 +2,7 @@ from src.mlProject.constants import *
 from src.mlProject.utils.common import read_yaml,create_directories
 from src.mlProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig, 
                                                 DataTransformationConfig, ModelTrainingConfig,
-                                                ModelEvaluationConfig)
+                                                ModelEvaluationConfig, ModelExplainabilityConfig)
 
 
 class ConfigurationManager:
@@ -99,3 +99,21 @@ class ConfigurationManager:
         )
 
         return model_evaluation_config
+    
+    def get_model_explainability_config(self) -> ModelExplainabilityConfig:
+        config = self.config.model_explainability
+        params = self.params.XAI
+
+        create_directories([config.root_dir])
+
+        model_explainability_config = ModelExplainabilityConfig(
+            root_dir=config.root_dir,
+            model_path=config.model_path,
+            test_data_path=config.test_data_path,
+            xai_report_file=config.xai_report_file,
+            shap_values_file=config.shap_values_file,
+            num_test_instances=params.num_test_instances,
+            num_features_lime=params.num_features_lime,
+        )
+
+        return model_explainability_config

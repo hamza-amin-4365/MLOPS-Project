@@ -27,3 +27,10 @@ model_evaluation:
   test_data_path: artifacts/data_transformation/test.csv
   model_path: artifacts/model_trainer/model.joblib
   metric_file_name: artifacts/model_evaluation/metrics.json
+
+model_explainability:
+  root_dir: artifacts/model_explainability
+  model_path: artifacts/model_trainer/model.joblib
+  test_data_path: artifacts/data_transformation/test.csv
+  xai_report_file: artifacts/model_explainability/xai_report.html
+  shap_values_file: artifacts/model_explainability/shap_values.npy

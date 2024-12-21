@@ -40,3 +40,14 @@ class ModelEvaluationConfig:
     metric_file_name: Path
     target_column: str
     mlflow_uri: str
+    
+
+@dataclass(frozen=True)
+class ModelExplainabilityConfig:
+    root_dir: Path
+    model_path: Path
+    test_data_path: Path
+    xai_report_file: Path
+    shap_values_file: Path
+    num_test_instances: int
+    num_features_lime: int

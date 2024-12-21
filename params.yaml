@@ -1,3 +1,10 @@
 ElasticNet:
   alpha: 0.2
   l1_ratio: 0.1
+
+XAI:
+  num_test_instances: 5  # Number of instances to explain with SHAP
+  num_features_lime: 10 # Number of features to show in LIME explanation
+
+  model_explainability:
+  target_column: "quality"

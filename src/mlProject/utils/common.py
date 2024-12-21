@@ -95,7 +95,7 @@ def save_bin(data: Any, path: Path):
 
 
 @ensure_annotations
-def load_bin(path: Path) -> Any:
+def load_bin(path: Path):
     """load binary data
 
     Args:
